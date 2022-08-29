@@ -15,8 +15,8 @@ spring:
     username: sbsst
     password: 123414
   jpa:
-    #hibernate:
-    #ddl-auto: create
+    hibernate:
+      ddl-auto: update #create
     properties:
       hibernate:
         show_sql: true
