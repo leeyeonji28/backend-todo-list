@@ -36,4 +36,11 @@ public class TodoController {
         todoService.deleteTodo(id, response);
         return todoService.getTodos();
     }
+
+    // @PutMapping // 전체적인 업데이트
+    @PatchMapping("/{id}") // 일부 수정
+    public List<Todo> CheckTodo(@PathVariable("id") Integer id, HttpServletResponse response) throws IOException{
+        todoService.checkTodo(id, response);
+        return todoService.getTodos();
+    }
 }
